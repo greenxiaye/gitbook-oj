@@ -3,6 +3,9 @@
 - [Introduction](README.md)
 
 - [Leetcode 常规汪](./Leetcode/Classics/index.md)
+- Leetcode JavaScript汪
+  - [2618. 检查是否是类的对象实例](./Leetcode/Problems/Medium/2618.md)
+  - [2619. 数组原型对象的最后一个元素](./Leetcode/Problems/Easy/2619.md)
 - Leetcode 每日自刷汪
   - 数组
     - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
