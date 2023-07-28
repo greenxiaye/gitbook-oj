@@ -9,6 +9,7 @@
     - [88. 合并两个有序数组](./Leetcode/Problems/easy/88.md)
   - 字符串
     - [415. 字符串相加](./Leetcode/Problems/Easy/415.md)
+    - [9. 回文数](./Leetcode/Problems/Easy/9.md)
   - 排序
     - [912. 排序数组](./Leetcode/Problems/Medium/912.md)
   - hash
@@ -17,6 +18,7 @@
     - [718. 最长重复子数组](./Leetcode/Problems/Medium/718.md)
     - [322. 零钱兑换](./Leetcode/Problems/Medium/322.md)
     - [300. 最长递增子序列](./Leetcode/Problems/Medium/300.md)
+    - [5. 最长回文子串](./Leetcode/Problems/Medium/5.md)
   - 树
     - [129. 求根节点到叶节点数字之和](./Leetcode/Problems/Medium/129.md)
   - 滑动窗口
@@ -24,3 +26,7 @@
   - 双指针
     - [165. 比较版本号](./Leetcode/Problems/Medium/165.md)
     - [15. 三数之和](./Leetcode/Problems/Medium/15.md)
+    - [16. 最接近的三数之和](./Leetcode/Problems/Medium/16.md)
+  - 二分
+    - [34. 在排序数组中查找元素的第一个和最后一个位置](./Leetcode/Problems/Medium/34.md)
+    - [35. 搜索插入位置](./Leetcode/Problems/Easy/35.md)
