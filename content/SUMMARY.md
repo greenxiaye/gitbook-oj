@@ -4,7 +4,23 @@
 
 - [Leetcode 常规汪](./Leetcode/Classics/index.md)
 - Leetcode 每日自刷汪
+  - 数组
+    - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
+    - [88. 合并两个有序数组](./Leetcode/Problems/easy/88.md)
   - 字符串
     - [415. 字符串相加](./Leetcode/Problems/Easy/415.md)
+  - 排序
+    - [912. 排序数组](./Leetcode/Problems/Medium/912.md)
+  - hash
+    - [146. LRU 缓存](./Leetcode/Problems/Medium/146.md)
   - 动态规划
     - [718. 最长重复子数组](./Leetcode/Problems/Medium/718.md)
+    - [322. 零钱兑换](./Leetcode/Problems/Medium/322.md)
+    - [300. 最长递增子序列](./Leetcode/Problems/Medium/300.md)
+  - 树
+    - [129. 求根节点到叶节点数字之和](./Leetcode/Problems/Medium/129.md)
+  - 滑动窗口
+    - [209. 长度最小的子数组](./Leetcode/Problems/Medium/209.md)
+  - 双指针
+    - [165. 比较版本号](./Leetcode/Problems/Medium/165.md)
+    - [15. 三数之和](./Leetcode/Problems/Medium/15.md)

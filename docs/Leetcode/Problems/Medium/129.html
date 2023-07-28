@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>718. 最长重复子数组 · GitBook</title>
+        <title>129. 求根节点到叶节点数字之和 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,8 +60,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="322.html" />
     
     
 
@@ -286,7 +284,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.5.1" data-path="718.html">
+        <li class="chapter " data-level="1.3.5.1" data-path="718.html">
             
                 <a href="718.html">
             
@@ -344,7 +342,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.6.1" data-path="129.html">
+        <li class="chapter active" data-level="1.3.6.1" data-path="129.html">
             
                 <a href="129.html">
             
@@ -474,7 +472,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >718. 最长重复子数组</a>
+        <a href="../../.." >129. 求根节点到叶节点数字之和</a>
     </h1>
 </div>
 
@@ -489,57 +487,104 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="718-&#x6700;&#x957F;&#x91CD;&#x590D;&#x5B50;&#x6570;&#x7EC4;">718. &#x6700;&#x957F;&#x91CD;&#x590D;&#x5B50;&#x6570;&#x7EC4;</h1>
+                                <h1 id="129-&#x6C42;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x6570;&#x5B57;&#x4E4B;&#x548C;">129. &#x6C42;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x6570;&#x5B57;&#x4E4B;&#x548C;</h1>
 <h2 id="description">Description</h2>
-<pre><code class="lang-Markdown">&#x7ED9;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums1 &#x548C; nums2 &#xFF0C;&#x8FD4;&#x56DE; &#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D; &#x516C;&#x5171;&#x7684; &#x3001;&#x957F;&#x5EA6;&#x6700;&#x957F;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6; &#x3002;
+<pre><code class="lang-Markdown">&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; root &#xFF0C;&#x6811;&#x4E2D;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x5B58;&#x653E;&#x6709;&#x4E00;&#x4E2A; 0 &#x5230; 9 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x5B57;&#x3002;
+&#x6BCF;&#x6761;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x90FD;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF1A;
+
+&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84; 1 -&gt; 2 -&gt; 3 &#x8868;&#x793A;&#x6570;&#x5B57; 123 &#x3002;
+&#x8BA1;&#x7B97;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x751F;&#x6210;&#x7684; &#x6240;&#x6709;&#x6570;&#x5B57;&#x4E4B;&#x548C; &#x3002;
+
+&#x53F6;&#x8282;&#x70B9; &#x662F;&#x6307;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x3002;
 
 &#x793A;&#x4F8B; 1&#xFF1A;
-&#x8F93;&#x5165;&#xFF1A;nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]
-&#x8F93;&#x51FA;&#xFF1A;3
-&#x89E3;&#x91CA;&#xFF1A;&#x957F;&#x5EA6;&#x6700;&#x957F;&#x7684;&#x516C;&#x5171;&#x5B50;&#x6570;&#x7EC4;&#x662F; [3,2,1] &#x3002;
+</code></pre>
+<p><img src="pic/129-1.jpg" alt="&#x8282;&#x70B9;"></p>
+<pre><code class="lang-Markdown">&#x8F93;&#x5165;&#xFF1A;root = [1,2,3]
+&#x8F93;&#x51FA;&#xFF1A;25
+&#x89E3;&#x91CA;&#xFF1A;
+&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 1-&gt;2 &#x4EE3;&#x8868;&#x6570;&#x5B57; 12
+&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 1-&gt;3 &#x4EE3;&#x8868;&#x6570;&#x5B57; 13
+&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x5B57;&#x603B;&#x548C; = 12 + 13 = 25
 &#x793A;&#x4F8B; 2&#xFF1A;
-&#x8F93;&#x5165;&#xFF1A;nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]
-&#x8F93;&#x51FA;&#xFF1A;5
-
-&#x63D0;&#x793A;&#xFF1A;
-1 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">nums1.length</span>, <span class="hljs-attr">nums2.length</span> &lt;= <span class="hljs-attr">1000</span>
-<span class="hljs-attr">0</span> &lt;= <span class="hljs-attr">nums1</span>[<span class="hljs-attr">i</span>], <span class="hljs-attr">nums2</span>[<span class="hljs-attr">i</span>] &lt;= <span class="hljs-attr">100</span>
-</span></span></code></pre>
+</code></pre>
+<p><img src="pic/129-2.jpg" alt="&#x8282;&#x70B9;"></p>
+<pre><code class="lang-Markdown">
+&#x8F93;&#x5165;&#xFF1A;root = [4,9,0,5,1]
+&#x8F93;&#x51FA;&#xFF1A;1026
+&#x89E3;&#x91CA;&#xFF1A;
+&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;9-&gt;5 &#x4EE3;&#x8868;&#x6570;&#x5B57; 495
+&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;9-&gt;1 &#x4EE3;&#x8868;&#x6570;&#x5B57; 491
+&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;0 &#x4EE3;&#x8868;&#x6570;&#x5B57; 40
+&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x5B57;&#x603B;&#x548C; = 495 + 491 + 40 = 1026
+</code></pre>
 <h2 id="solution">Solution</h2>
 <ol>
-<li>&#x52A8;&#x6001;&#x89C4;&#x5212;</li>
-<li>&#x505A;&#x4E00;&#x4E2A;&#x4E8C;&#x4F4D;&#x6570;&#x7EC4;&#xFF0C;&#x6A2A;&#x7740;&#x7684;&#x5143;&#x7D20;&#x662F; nums1&#xFF0C;&#x7AD6;&#x7740;&#x7684;&#x6570;&#x7EC4;&#x662F; nums2&#xFF0C;&#x5982;&#x679C; nums1 &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x548C; nums2 &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x76F8;&#x7B49;&#xFF0C;&#x5219; dp[0][0]=1&#x3002;&#x6BCF;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x90FD;&#x662F;&#x5B83;&#x5DE6;&#x4E0A;&#x89D2;&#x7684;&#x5143;&#x7D20;+1&#xFF0C;&#x5373; dp[i + 1][j + 1] = dp[i][j] + 1&#xFF0C;&#x8FD9;&#x662F;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;&#x3002;&#x6700;&#x540E;&#x518D;&#x53D6;dp&#x91CC;&#x7684;&#x6700;&#x5927;&#x503C;&#x5373;&#x4E3A;&#x7B54;&#x6848;&#x3002;</li>
+<li>&#x6811;</li>
+<li>&#x7EF4;&#x62A4;&#x4E00;&#x4E2A; path&#xFF0C;&#x5728; dfs &#x4E4B;&#x524D;&#x5F80; path &#x91CC;&#x653E;&#x503C;&#xFF0C;&#x5728; dfs &#x4E4B;&#x540E; pop &#x503C;</li>
+<li>&#x5F53;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x524D; path &#x7EF4;&#x62A4;&#x5B8C;&#x6BD5;&#xFF0C;&#x5E76;&#x6E05;&#x7A7A; path</li>
 </ol>
 <h2 id="code">Code</h2>
 <pre><code class="lang-JavaScript"><span class="hljs-comment">/**
- * @param {number[]} nums1
- * @param {number[]} nums2
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TreeNode</span>(<span class="hljs-params">val, left, right</span>) </span>{
+    <span class="hljs-keyword">this</span>.val = (val === <span class="hljs-literal">undefined</span> ? <span class="hljs-number">0</span> : val)
+    <span class="hljs-keyword">this</span>.left = (left === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : left)
+    <span class="hljs-keyword">this</span>.right = (right === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : right)
+}
+<span class="hljs-comment">/**
+ * @param {TreeNode} root
  * @return {number}
  */</span>
-<span class="hljs-keyword">var</span> findLength = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">nums1, nums2</span>) </span>{
-    <span class="hljs-keyword">let</span> len1 = nums1.length
-    <span class="hljs-keyword">let</span> len2 = nums2.length
-    <span class="hljs-keyword">let</span> max = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">let</span> dp = <span class="hljs-built_in">Array</span>.from({ length: len1 + <span class="hljs-number">1</span> }, () =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(len2 + <span class="hljs-number">1</span>).fill(<span class="hljs-number">0</span>))
-    <span class="hljs-built_in">console</span>.log(dp)
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; len1; i++) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; len2; j++) {
-            <span class="hljs-keyword">if</span> (nums1[i] === nums2[j]) {
-                dp[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>] = dp[i][j] + <span class="hljs-number">1</span>
-                max = <span class="hljs-built_in">Math</span>.max(max, dp[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>])
-            }
-
+<span class="hljs-keyword">var</span> sumNumbers = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root</span>) </span>{
+    <span class="hljs-keyword">let</span> ans = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">let</span> res = []
+    <span class="hljs-keyword">let</span> path = [root.val]
+    <span class="hljs-keyword">const</span> dfs = (n, path) =&gt; {
+        <span class="hljs-keyword">if</span> (!n) <span class="hljs-keyword">return</span>
+        <span class="hljs-keyword">if</span> (!n.left &amp;&amp; !n.right) {
+            res.push([...path])
+            <span class="hljs-keyword">return</span>
+        }
+        <span class="hljs-keyword">if</span> (n.left) {
+            path.push(n.left.val)
+            dfs(n.left, path)
+            path.pop()
+        }
+        <span class="hljs-keyword">if</span> (n.right) {
+            path.push(n.right.val)
+            dfs(n.right, path)
+            path.pop()
         }
     }
-    <span class="hljs-keyword">return</span> max
+    dfs(root, path)
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; res.length; i++) {
+        ans += <span class="hljs-built_in">Number</span>(res[i].join(<span class="hljs-string">&apos;&apos;</span>))
+    }
+    <span class="hljs-keyword">return</span> ans
 };
-<span class="hljs-keyword">let</span> nums1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>], nums2 = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">7</span>]
-<span class="hljs-keyword">let</span> ans = findLength(nums1, nums2)
+<span class="hljs-keyword">let</span> node_4 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">4</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
+<span class="hljs-keyword">let</span> node_9 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">9</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
+<span class="hljs-keyword">let</span> node_0 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
+<span class="hljs-keyword">let</span> node_5 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">5</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
+<span class="hljs-keyword">let</span> node_1 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
+node_4.left = node_9
+node_4.right = node_0
+node_9.left = node_5
+node_9.right = node_1
+<span class="hljs-keyword">let</span> ans = sumNumbers(node_4)
 <span class="hljs-built_in">console</span>.log(ans)
 </code></pre>
 <h2 id="source">Source</h2>
 <p>&#x6765;&#x6E90;&#xFF1A;&#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;
-&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode.cn/problems/maximum-length-of-repeated-subarray" target="_blank">https://leetcode.cn/problems/maximum-length-of-repeated-subarray</a></p>
+&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode.cn/problems/sum-root-to-leaf-numbers" target="_blank">https://leetcode.cn/problems/sum-root-to-leaf-numbers</a></p>
 
                                 
                                 </section>
@@ -568,10 +613,6 @@
             
                 
                 
-                <a href="322.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 322. 零钱兑换">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
             
         
     </div>
@@ -579,7 +620,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"718. 最长重复子数组","level":"1.3.5.1","depth":3,"next":{"title":"322. 零钱兑换","level":"1.3.5.2","depth":3,"path":"Leetcode/Problems/Medium/322.md","ref":"./Leetcode/Problems/Medium/322.md","articles":[]},"previous":{"title":"动态规划","level":"1.3.5","depth":2,"ref":"","articles":[{"title":"718. 最长重复子数组","level":"1.3.5.1","depth":3,"path":"Leetcode/Problems/Medium/718.md","ref":"./Leetcode/Problems/Medium/718.md","articles":[]},{"title":"322. 零钱兑换","level":"1.3.5.2","depth":3,"path":"Leetcode/Problems/Medium/322.md","ref":"./Leetcode/Problems/Medium/322.md","articles":[]},{"title":"300. 最长递增子序列","level":"1.3.5.3","depth":3,"path":"Leetcode/Problems/Medium/300.md","ref":"./Leetcode/Problems/Medium/300.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Leetcode/Problems/Medium/718.md","mtime":"2023-07-28T08:07:47.017Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-28T15:07:48.629Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"129. 求根节点到叶节点数字之和","level":"1.3.6.1","depth":3,"next":{"title":"滑动窗口","level":"1.3.7","depth":2,"ref":"","articles":[{"title":"209. 长度最小的子数组","level":"1.3.7.1","depth":3,"path":"Leetcode/Problems/Medium/209.md","ref":"./Leetcode/Problems/Medium/209.md","articles":[]}]},"previous":{"title":"树","level":"1.3.6","depth":2,"ref":"","articles":[{"title":"129. 求根节点到叶节点数字之和","level":"1.3.6.1","depth":3,"path":"Leetcode/Problems/Medium/129.md","ref":"./Leetcode/Problems/Medium/129.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Leetcode/Problems/Medium/129.md","mtime":"2023-07-28T14:02:30.597Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-28T15:07:48.629Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
