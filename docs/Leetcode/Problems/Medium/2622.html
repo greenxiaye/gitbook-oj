@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>129. 求根节点到叶节点数字之和 · GitBook</title>
+        <title>2622. 有时间限制的缓存 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,6 +61,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../Easy/2629.html" />
+    
+    
+    <link rel="prev" href="../Easy/2621.html" />
     
 
     </head>
@@ -181,7 +185,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="2622.html">
+        <li class="chapter active" data-level="1.3.5" data-path="2622.html">
             
                 <a href="2622.html">
             
@@ -465,7 +469,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.6.1" data-path="129.html">
+        <li class="chapter " data-level="1.4.6.1" data-path="129.html">
             
                 <a href="129.html">
             
@@ -653,7 +657,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >129. 求根节点到叶节点数字之和</a>
+        <a href="../../.." >2622. 有时间限制的缓存</a>
     </h1>
 </div>
 
@@ -668,104 +672,178 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="129-&#x6C42;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x6570;&#x5B57;&#x4E4B;&#x548C;">129. &#x6C42;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x6570;&#x5B57;&#x4E4B;&#x548C;</h1>
+                                <h1 id="2622-&#x6709;&#x65F6;&#x95F4;&#x9650;&#x5236;&#x7684;&#x7F13;&#x5B58;">2622. &#x6709;&#x65F6;&#x95F4;&#x9650;&#x5236;&#x7684;&#x7F13;&#x5B58;</h1>
 <h2 id="description">Description</h2>
-<pre><code class="lang-Markdown">&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6839;&#x8282;&#x70B9; root &#xFF0C;&#x6811;&#x4E2D;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x5B58;&#x653E;&#x6709;&#x4E00;&#x4E2A; 0 &#x5230; 9 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x5B57;&#x3002;
-&#x6BCF;&#x6761;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84;&#x90FD;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF1A;
+<pre><code class="lang-Markdown">&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x952E;-&#x503C;&#x5BF9;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E2A;&#x952E;&#x90FD;&#x6709;&#x4E00;&#x4E2A; &#x8FC7;&#x671F;&#x65F6;&#x95F4; &#x3002;
 
-&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x7684;&#x8DEF;&#x5F84; 1 -&gt; 2 -&gt; 3 &#x8868;&#x793A;&#x6570;&#x5B57; 123 &#x3002;
-&#x8BA1;&#x7B97;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x53F6;&#x8282;&#x70B9;&#x751F;&#x6210;&#x7684; &#x6240;&#x6709;&#x6570;&#x5B57;&#x4E4B;&#x548C; &#x3002;
+&#x8BE5;&#x7C7B;&#x6709;&#x4E09;&#x4E2A;&#x516C;&#x5171;&#x65B9;&#x6CD5;&#xFF1A;
 
-&#x53F6;&#x8282;&#x70B9; &#x662F;&#x6307;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x3002;
+set(key, value, duration) &#xFF1A;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x4E3A;&#x6574;&#x578B;&#x952E; key &#x3001;&#x6574;&#x578B;&#x503C; value &#x548C;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4; duration &#x3002;&#x4E00;&#x65E6; duration &#x5230;&#x671F;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x952E;&#x5C31;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#x3002;&#x5982;&#x679C;&#x76F8;&#x540C;&#x7684;&#x672A;&#x8FC7;&#x671F;&#x952E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x8FD4;&#x56DE; true &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false &#x3002;&#x5982;&#x679C;&#x8BE5;&#x952E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5B83;&#x7684;&#x503C;&#x548C;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x90FD;&#x5E94;&#x8BE5;&#x88AB;&#x8986;&#x76D6;&#x3002;
+
+get(key) &#xFF1A;&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x672A;&#x8FC7;&#x671F;&#x7684;&#x952E;&#xFF0C;&#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x952E;&#x76F8;&#x5173;&#x7684;&#x503C;&#x3002;&#x5426;&#x5219;&#x8FD4;&#x56DE; -1 &#x3002;
+
+count() &#xFF1A;&#x8FD4;&#x56DE;&#x672A;&#x8FC7;&#x671F;&#x952E;&#x7684;&#x603B;&#x6570;&#x3002;
 
 &#x793A;&#x4F8B; 1&#xFF1A;
-</code></pre>
-<p><img src="pic/129-1.jpg" alt="&#x8282;&#x70B9;"></p>
-<pre><code class="lang-Markdown">&#x8F93;&#x5165;&#xFF1A;root = [1,2,3]
-&#x8F93;&#x51FA;&#xFF1A;25
+&#x8F93;&#x5165;&#xFF1A;
+[&quot;TimeLimitedCache&quot;, &quot;set&quot;, &quot;get&quot;, &quot;count&quot;, &quot;get&quot;]
+[[], [1, 42, 100], [1], [], [1]]
+[0, 0, 50, 50, 150]
+&#x8F93;&#x51FA;&#xFF1A; [null, false, 42, 1, -1]
 &#x89E3;&#x91CA;&#xFF1A;
-&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 1-&gt;2 &#x4EE3;&#x8868;&#x6570;&#x5B57; 12
-&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 1-&gt;3 &#x4EE3;&#x8868;&#x6570;&#x5B57; 13
-&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x5B57;&#x603B;&#x548C; = 12 + 13 = 25
+&#x5728; t=0 &#x65F6;&#xFF0C;&#x7F13;&#x5B58;&#x88AB;&#x6784;&#x9020;&#x3002;
+&#x5728; t=0 &#x65F6;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9; (1: 42) &#xFF0C;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x4E3A; 100ms &#x3002;&#x56E0;&#x4E3A;&#x8BE5;&#x503C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE;false&#x3002;
+&#x5728; t=50 &#x65F6;&#xFF0C;&#x8BF7;&#x6C42; key=1 &#x5E76;&#x8FD4;&#x56DE;&#x503C; 42&#x3002;
+&#x5728; t=50 &#x65F6;&#xFF0C;&#x8C03;&#x7528; count() &#xFF0C;&#x7F13;&#x5B58;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x672A;&#x8FC7;&#x671F;&#x7684;&#x952E;&#x3002;
+&#x5728; t=100 &#x65F6;&#xFF0C;key=1 &#x5230;&#x671F;&#x3002;
+&#x5728; t=150 &#x65F6;&#xFF0C;&#x8C03;&#x7528; get(1) &#xFF0C;&#x8FD4;&#x56DE; -1&#xFF0C;&#x56E0;&#x4E3A;&#x7F13;&#x5B58;&#x662F;&#x7A7A;&#x7684;&#x3002;
 &#x793A;&#x4F8B; 2&#xFF1A;
-</code></pre>
-<p><img src="pic/129-2.jpg" alt="&#x8282;&#x70B9;"></p>
-<pre><code class="lang-Markdown">
-&#x8F93;&#x5165;&#xFF1A;root = [4,9,0,5,1]
-&#x8F93;&#x51FA;&#xFF1A;1026
+&#x8F93;&#x5165;&#xFF1A;
+[&quot;TimeLimitedCache&quot;, &quot;set&quot;, &quot;set&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;, &quot;count&quot;]
+[[], [1, 42, 50], [1, 50, 100], [1], [1], [1], []]
+[0, 0, 40, 50, 120, 200, 250]
+&#x8F93;&#x51FA;&#xFF1A; [null, false, true, 50, 50, -1]
 &#x89E3;&#x91CA;&#xFF1A;
-&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;9-&gt;5 &#x4EE3;&#x8868;&#x6570;&#x5B57; 495
-&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;9-&gt;1 &#x4EE3;&#x8868;&#x6570;&#x5B57; 491
-&#x4ECE;&#x6839;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x8DEF;&#x5F84; 4-&gt;0 &#x4EE3;&#x8868;&#x6570;&#x5B57; 40
-&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x5B57;&#x603B;&#x548C; = 495 + 491 + 40 = 1026
-</code></pre>
+&#x5728; t=0 &#x65F6;&#xFF0C;&#x7F13;&#x5B58;&#x88AB;&#x6784;&#x9020;&#x3002;
+&#x5728; t=0 &#x65F6;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9; (1: 42) &#xFF0C;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x4E3A; 50ms&#x3002;&#x56E0;&#x4E3A;&#x8BE5;&#x503C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE;false&#x3002;
+&#x5F53; t=40 &#x65F6;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9; (1: 50) &#xFF0C;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x4E3A; 100ms&#x3002;&#x56E0;&#x4E3A;&#x4E00;&#x4E2A;&#x672A;&#x8FC7;&#x671F;&#x7684;&#x952E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE; true &#x5E76;&#x8986;&#x76D6;&#x8FD9;&#x4E2A;&#x952E;&#x7684;&#x65E7;&#x503C;&#x3002;
+&#x5728; t=50 &#x65F6;&#xFF0C;&#x8C03;&#x7528; get(1) &#xFF0C;&#x8FD4;&#x56DE; 50&#x3002;
+&#x5728; t=120 &#x65F6;&#xFF0C;&#x8C03;&#x7528; get(1) &#xFF0C;&#x8FD4;&#x56DE; 50&#x3002;
+&#x5728; t=140 &#x65F6;&#xFF0C;key=1 &#x8FC7;&#x671F;&#x3002;
+&#x5728; t=200 &#x65F6;&#xFF0C;&#x8C03;&#x7528; get(1) &#xFF0C;&#x4F46;&#x7F13;&#x5B58;&#x4E3A;&#x7A7A;&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE; -1&#x3002;
+&#x5728; t=250 &#x65F6;&#xFF0C;count() &#x8FD4;&#x56DE;0 &#xFF0C;&#x56E0;&#x4E3A;&#x7F13;&#x5B58;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x672A;&#x8FC7;&#x671F;&#x7684;&#x952E;&#x3002;
+
+&#x63D0;&#x793A;&#xFF1A;
+0 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">key</span> &lt;= <span class="hljs-attr">109</span>
+<span class="hljs-attr">0</span> &lt;= <span class="hljs-attr">value</span> &lt;= <span class="hljs-attr">109</span>
+<span class="hljs-attr">0</span> &lt;= <span class="hljs-attr">duration</span> &lt;= <span class="hljs-attr">1000</span>
+&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x603B;&#x6570;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;<span class="hljs-attr">100</span>
+</span></span></code></pre>
 <h2 id="solution">Solution</h2>
 <ol>
-<li>&#x6811;</li>
-<li>&#x7EF4;&#x62A4;&#x4E00;&#x4E2A; path&#xFF0C;&#x5728; dfs &#x4E4B;&#x524D;&#x5F80; path &#x91CC;&#x653E;&#x503C;&#xFF0C;&#x5728; dfs &#x4E4B;&#x540E; pop &#x503C;</li>
-<li>&#x5F53;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x524D; path &#x7EF4;&#x62A4;&#x5B8C;&#x6BD5;&#xFF0C;&#x5E76;&#x6E05;&#x7A7A; path</li>
+<li>timeStamp or setTimeout</li>
 </ol>
 <h2 id="code">Code</h2>
-<pre><code class="lang-JavaScript"><span class="hljs-comment">/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */</span>
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">TreeNode</span>(<span class="hljs-params">val, left, right</span>) </span>{
-    <span class="hljs-keyword">this</span>.val = (val === <span class="hljs-literal">undefined</span> ? <span class="hljs-number">0</span> : val)
-    <span class="hljs-keyword">this</span>.left = (left === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : left)
-    <span class="hljs-keyword">this</span>.right = (right === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : right)
-}
-<span class="hljs-comment">/**
- * @param {TreeNode} root
- * @return {number}
- */</span>
-<span class="hljs-keyword">var</span> sumNumbers = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root</span>) </span>{
-    <span class="hljs-keyword">let</span> ans = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">let</span> res = []
-    <span class="hljs-keyword">let</span> path = [root.val]
-    <span class="hljs-keyword">const</span> dfs = (n, path) =&gt; {
-        <span class="hljs-keyword">if</span> (!n) <span class="hljs-keyword">return</span>
-        <span class="hljs-keyword">if</span> (!n.left &amp;&amp; !n.right) {
-            res.push([...path])
-            <span class="hljs-keyword">return</span>
-        }
-        <span class="hljs-keyword">if</span> (n.left) {
-            path.push(n.left.val)
-            dfs(n.left, path)
-            path.pop()
-        }
-        <span class="hljs-keyword">if</span> (n.right) {
-            path.push(n.right.val)
-            dfs(n.right, path)
-            path.pop()
-        }
-    }
-    dfs(root, path)
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; res.length; i++) {
-        ans += <span class="hljs-built_in">Number</span>(res[i].join(<span class="hljs-string">&apos;&apos;</span>))
-    }
-    <span class="hljs-keyword">return</span> ans
+<h3 id="code1">Code_1</h3>
+<pre><code class="lang-JavaScript"><span class="hljs-keyword">var</span> TimeLimitedCache = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
+    <span class="hljs-keyword">this</span>.time = {} <span class="hljs-comment">// key&#x4E3A;&#x65F6;&#x95F4; value &#x4E3A;&#x51FD;&#x6570; &#x4E14;&#x81EA;&#x52A8;&#x5220;&#x9664;</span>
 };
-<span class="hljs-keyword">let</span> node_4 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">4</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
-<span class="hljs-keyword">let</span> node_9 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">9</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
-<span class="hljs-keyword">let</span> node_0 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
-<span class="hljs-keyword">let</span> node_5 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">5</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
-<span class="hljs-keyword">let</span> node_1 = <span class="hljs-keyword">new</span> TreeNode(<span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>)
-node_4.left = node_9
-node_4.right = node_0
-node_9.left = node_5
-node_9.right = node_1
-<span class="hljs-keyword">let</span> ans = sumNumbers(node_4)
-<span class="hljs-built_in">console</span>.log(ans)
+
+<span class="hljs-comment">/**
+ * @param {number} key
+ * @param {number} value
+ * @param {number} time until expiration in ms
+ * @return {boolean} if un-expired key already existed
+ */</span>
+<span class="hljs-comment">// TimeLimitedCache.prototype.set = function (key, value, duration) {</span>
+<span class="hljs-comment">//     if (this.map.has(key)) {</span>
+<span class="hljs-comment">//         let res = this.map.has(key)</span>
+<span class="hljs-comment">//         this.map.set(key, value)</span>
+<span class="hljs-comment">//         clearTimeout(this.time[key])</span>
+<span class="hljs-comment">//         this.time[key] = setTimeout(() =&gt; {</span>
+<span class="hljs-comment">//             this.map.delete(key)</span>
+<span class="hljs-comment">//         }, duration)</span>
+<span class="hljs-comment">//         return res</span>
+<span class="hljs-comment">//     } else {</span>
+<span class="hljs-comment">//         let res = this.map.has(key)</span>
+<span class="hljs-comment">//         this.map.set(key, value)</span>
+<span class="hljs-comment">//         clearTimeout(this.time[key])</span>
+<span class="hljs-comment">//         this.time[key] = setTimeout(() =&gt; {</span>
+<span class="hljs-comment">//             this.map.delete(key)</span>
+<span class="hljs-comment">//         }, duration)</span>
+<span class="hljs-comment">//         return res</span>
+<span class="hljs-comment">//     }</span>
+<span class="hljs-comment">// };</span>
+TimeLimitedCache.prototype.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key, value, duration</span>) </span>{
+    <span class="hljs-keyword">let</span> res = <span class="hljs-keyword">this</span>.map.has(key)
+    <span class="hljs-keyword">this</span>.map.set(key, value)
+    clearTimeout(<span class="hljs-keyword">this</span>.times[key])
+    <span class="hljs-keyword">this</span>.times[key] = setTimeout(() =&gt; {
+        <span class="hljs-keyword">this</span>.map.delete(key)
+    }, duration)
+    <span class="hljs-keyword">return</span> res
+};
+
+<span class="hljs-comment">/**
+ * @param {number} key
+ * @return {number} value associated with key
+ */</span>
+TimeLimitedCache.prototype.get = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.map.has(key) ? <span class="hljs-keyword">this</span>.map.get(key) : <span class="hljs-number">-1</span>
+};
+
+<span class="hljs-comment">/**
+ * @return {number} count of non-expired keys
+ */</span>
+TimeLimitedCache.prototype.count = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.map.size
+};
+
+<span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> TimeLimitedCache()
+<span class="hljs-keyword">let</span> ans1 = obj.set(<span class="hljs-number">1</span>, <span class="hljs-number">42</span>, <span class="hljs-number">1000</span>); <span class="hljs-comment">// false</span>
+<span class="hljs-keyword">let</span> ans2 = obj.get(<span class="hljs-number">1</span>) <span class="hljs-comment">// 42</span>
+<span class="hljs-keyword">let</span> ans3 = obj.count() <span class="hljs-comment">// 1</span>
+
+<span class="hljs-built_in">console</span>.log(ans1, ans2, ans3)
+</code></pre>
+<h3 id="code2">Code_2</h3>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">//&#x76F4;&#x63A5;&#x6A21;&#x62DF;, bad method</span>
+<span class="hljs-comment">// &#x96BE;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;&#xFF01;1</span>
+<span class="hljs-keyword">var</span> TimeLimitedCache = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.dataStore = {};
+};
+
+<span class="hljs-comment">/**
+ * @param {number} key
+ * @param {number} value
+ * @param {number} time until expiration in ms
+ * @return {boolean} if un-expired key already existed
+ */</span>
+TimeLimitedCache.prototype.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key, value, duration</span>) </span>{
+    <span class="hljs-keyword">let</span> flag = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.dataStore[key]) {
+        flag = <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">this</span>.dataStore[key] = {
+        value,
+        duration,
+        timeStamp: <span class="hljs-built_in">Date</span>.now()
+    }
+    <span class="hljs-keyword">return</span> flag;
+};
+
+<span class="hljs-comment">/**
+ * @param {number} key
+ * @return {number} value associated with key
+ */</span>
+TimeLimitedCache.prototype.get = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{
+    <span class="hljs-keyword">let</span> nowDate = <span class="hljs-built_in">Date</span>.now();
+    <span class="hljs-keyword">let</span> val = <span class="hljs-keyword">this</span>.dataStore[key]?.value;
+    <span class="hljs-keyword">let</span> timeStamp = <span class="hljs-keyword">this</span>.dataStore[key]?.timeStamp;
+    <span class="hljs-keyword">let</span> duration = <span class="hljs-keyword">this</span>.dataStore[key]?.duration;
+    <span class="hljs-keyword">if</span> (val &amp;&amp; (nowDate - timeStamp) &lt; duration) {
+        <span class="hljs-keyword">return</span> val;
+    }
+    <span class="hljs-keyword">delete</span> <span class="hljs-keyword">this</span>.dataStore[key];
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+};
+
+<span class="hljs-comment">/**
+ * @return {number} count of non-expired keys
+ */</span>
+TimeLimitedCache.prototype.count = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> keyArr = <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>.dataStore);
+    <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">of</span> keyArr) {
+        count += <span class="hljs-keyword">this</span>.get(key) === <span class="hljs-number">-1</span> ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> count;
+};
 </code></pre>
 <h2 id="source">Source</h2>
 <p>&#x6765;&#x6E90;&#xFF1A;&#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;
-&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode.cn/problems/sum-root-to-leaf-numbers" target="_blank">https://leetcode.cn/problems/sum-root-to-leaf-numbers</a></p>
+&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode.cn/problems/cache-with-time-limit" target="_blank">https://leetcode.cn/problems/cache-with-time-limit</a></p>
 
                                 
                                 </section>
@@ -793,6 +871,14 @@ node_9.right = node_1
 
             
                 
+                <a href="../Easy/2621.html" class="navigation navigation-prev " aria-label="Previous page: 2621. 睡眠函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Easy/2629.html" class="navigation navigation-next " aria-label="Next page: 2629. 复合函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -801,7 +887,7 @@ node_9.right = node_1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"129. 求根节点到叶节点数字之和","level":"1.4.6.1","depth":3,"next":{"title":"滑动窗口","level":"1.4.7","depth":2,"ref":"","articles":[{"title":"209. 长度最小的子数组","level":"1.4.7.1","depth":3,"path":"Leetcode/Problems/Medium/209.md","ref":"./Leetcode/Problems/Medium/209.md","articles":[]}]},"previous":{"title":"树","level":"1.4.6","depth":2,"ref":"","articles":[{"title":"129. 求根节点到叶节点数字之和","level":"1.4.6.1","depth":3,"path":"Leetcode/Problems/Medium/129.md","ref":"./Leetcode/Problems/Medium/129.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Leetcode/Problems/Medium/129.md","mtime":"2023-07-28T15:08:35.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-29T07:17:53.380Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2622. 有时间限制的缓存","level":"1.3.5","depth":2,"next":{"title":"2629. 复合函数","level":"1.3.6","depth":2,"path":"Leetcode/Problems/Easy/2629.md","ref":"./Leetcode/Problems/Easy/2629.md","articles":[]},"previous":{"title":"2621. 睡眠函数","level":"1.3.4","depth":2,"path":"Leetcode/Problems/Easy/2621.md","ref":"./Leetcode/Problems/Easy/2621.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Leetcode/Problems/Medium/2622.md","mtime":"2023-07-29T07:09:53.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-29T07:17:53.380Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

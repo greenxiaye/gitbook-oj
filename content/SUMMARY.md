@@ -3,9 +3,13 @@
 - [Introduction](README.md)
 
 - [Leetcode 常规汪](./Leetcode/Classics/index.md)
-- Leetcode JavaScript汪
+- Leetcode JavaScript 汪
   - [2618. 检查是否是类的对象实例](./Leetcode/Problems/Medium/2618.md)
   - [2619. 数组原型对象的最后一个元素](./Leetcode/Problems/Easy/2619.md)
+  - [2620. 计数器](./Leetcode/Problems/Easy/2620.md) 闭包
+  - [2621. 睡眠函数](./Leetcode/Problems/Easy/2621.md) promise
+  - [2622. 有时间限制的缓存](./Leetcode/Problems/Medium/2622.md)
+  - [2629. 复合函数](./Leetcode/Problems/Easy/2629.md)
 - Leetcode 每日自刷汪
   - 数组
     - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
