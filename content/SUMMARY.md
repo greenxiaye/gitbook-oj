@@ -17,10 +17,12 @@
   - 字符串
     - [415. 字符串相加](./Leetcode/Problems/Easy/415.md)
     - [9. 回文数](./Leetcode/Problems/Easy/9.md)
+    - [709. 转换成小写字母](./Leetcode/Problems/Easy/709.md)
   - 排序
     - [912. 排序数组](./Leetcode/Problems/Medium/912.md)
   - hash
     - [146. LRU 缓存](./Leetcode/Problems/Medium/146.md)
+    - [49. 字母异位词分组](./Leetcode/Problems/Medium/49.md)
   - 动态规划
     - [718. 最长重复子数组](./Leetcode/Problems/Medium/718.md)
     - [322. 零钱兑换](./Leetcode/Problems/Medium/322.md)
@@ -37,3 +39,5 @@
   - 二分
     - [34. 在排序数组中查找元素的第一个和最后一个位置](./Leetcode/Problems/Medium/34.md)
     - [35. 搜索插入位置](./Leetcode/Problems/Easy/35.md)
+- nowcoder HJ 汪
+  - [关于 readline](./Nowcoder/Daily/index.md)
