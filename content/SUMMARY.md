@@ -13,7 +13,9 @@
 - Leetcode 每日自刷汪
   - 数组
     - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
-    - [88. 合并两个有序数组](./Leetcode/Problems/easy/88.md)
+    - [88. 合并两个有序数组](./Leetcode/Problems/Easy/88.md)
+    - [11. 盛最多水的容器](./Leetcode/Problems/Medium/11.md)
+    - [179. 最大数](./Leetcode/Problems/Medium/179.md)
   - 字符串
     - [415. 字符串相加](./Leetcode/Problems/Easy/415.md)
     - [9. 回文数](./Leetcode/Problems/Easy/9.md)
@@ -36,6 +38,7 @@
     - [165. 比较版本号](./Leetcode/Problems/Medium/165.md)
     - [15. 三数之和](./Leetcode/Problems/Medium/15.md)
     - [16. 最接近的三数之和](./Leetcode/Problems/Medium/16.md)
+    - [680. 验证回文串 II](./Leetcode/Problems/Easy/680.md) 双指针
   - 二分
     - [34. 在排序数组中查找元素的第一个和最后一个位置](./Leetcode/Problems/Medium/34.md)
     - [35. 搜索插入位置](./Leetcode/Problems/Easy/35.md)
