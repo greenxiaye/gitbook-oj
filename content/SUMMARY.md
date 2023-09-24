@@ -25,6 +25,7 @@
   - hash
     - [146. LRU 缓存](./Leetcode/Problems/Medium/146.md)
     - [49. 字母异位词分组](./Leetcode/Problems/Medium/49.md)
+    - [LCR 120. 寻找文件副本](./Leetcode/Problems/Easy/LCR_120.md)
   - 动态规划
     - [718. 最长重复子数组](./Leetcode/Problems/Medium/718.md)
     - [322. 零钱兑换](./Leetcode/Problems/Medium/322.md)
