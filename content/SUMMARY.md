@@ -15,13 +15,13 @@
     - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
     - [88. 合并两个有序数组](./Leetcode/Problems/Easy/88.md)
     - [11. 盛最多水的容器](./Leetcode/Problems/Medium/11.md)
-    - [179. 最大数](./Leetcode/Problems/Medium/179.md)
   - 字符串
     - [415. 字符串相加](./Leetcode/Problems/Easy/415.md)
     - [9. 回文数](./Leetcode/Problems/Easy/9.md)
     - [709. 转换成小写字母](./Leetcode/Problems/Easy/709.md)
   - 排序
     - [912. 排序数组](./Leetcode/Problems/Medium/912.md)
+    - [179. 最大数](./Leetcode/Problems/Medium/179.md)
   - hash
     - [146. LRU 缓存](./Leetcode/Problems/Medium/146.md)
     - [49. 字母异位词分组](./Leetcode/Problems/Medium/49.md)
