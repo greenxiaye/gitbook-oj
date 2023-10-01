@@ -1,0 +1,1083 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>61. 旋转链表 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="19.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../Classics/">
+            
+                <a href="../../Classics/">
+            
+                    
+                    Leetcode 常规汪
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Leetcode JavaScript 汪
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2618.html">
+            
+                <a href="2618.html">
+            
+                    
+                    2618. 检查是否是类的对象实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Easy/2619.html">
+            
+                <a href="../Easy/2619.html">
+            
+                    
+                    2619. 数组原型对象的最后一个元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Easy/2620.html">
+            
+                <a href="../Easy/2620.html">
+            
+                    
+                    2620. 计数器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Easy/2621.html">
+            
+                <a href="../Easy/2621.html">
+            
+                    
+                    2621. 睡眠函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="2622.html">
+            
+                <a href="2622.html">
+            
+                    
+                    2622. 有时间限制的缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Easy/2629.html">
+            
+                <a href="../Easy/2629.html">
+            
+                    
+                    2629. 复合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Leetcode 每日自刷汪
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7. 整数反转
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    数组
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="54.html">
+            
+                <a href="54.html">
+            
+                    
+                    54. 螺旋矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Easy/88.html">
+            
+                <a href="../Easy/88.html">
+            
+                    
+                    88. 合并两个有序数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11. 盛最多水的容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="80.html">
+            
+                <a href="80.html">
+            
+                    
+                    80. 删除有序数组中的重复项 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Easy/415.html">
+            
+                <a href="../Easy/415.html">
+            
+                    
+                    415. 字符串相加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Easy/9.html">
+            
+                <a href="../Easy/9.html">
+            
+                    
+                    9. 回文数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Easy/709.html">
+            
+                <a href="../Easy/709.html">
+            
+                    
+                    709. 转换成小写字母
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    排序
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="912.html">
+            
+                <a href="912.html">
+            
+                    
+                    912. 排序数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="179.html">
+            
+                <a href="179.html">
+            
+                    
+                    179. 最大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    hash
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="146.html">
+            
+                <a href="146.html">
+            
+                    
+                    146. LRU 缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="49.html">
+            
+                <a href="49.html">
+            
+                    
+                    49. 字母异位词分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Easy/LCR_120.html">
+            
+                <a href="../Easy/LCR_120.html">
+            
+                    
+                    LCR 120. 寻找文件副本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    链表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    19. 删除链表的倒数第 N 个结点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6.2" data-path="61.html">
+            
+                <a href="61.html">
+            
+                    
+                    61. 旋转链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="718.html">
+            
+                <a href="718.html">
+            
+                    
+                    718. 最长重复子数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="322.html">
+            
+                <a href="322.html">
+            
+                    
+                    322. 零钱兑换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="300.html">
+            
+                <a href="300.html">
+            
+                    
+                    300. 最长递增子序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5. 最长回文子串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    树
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="129.html">
+            
+                <a href="129.html">
+            
+                    
+                    129. 求根节点到叶节点数字之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" >
+            
+                <span>
+            
+                    
+                    滑动窗口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="209.html">
+            
+                <a href="209.html">
+            
+                    
+                    209. 长度最小的子数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" >
+            
+                <span>
+            
+                    
+                    双指针
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="165.html">
+            
+                <a href="165.html">
+            
+                    
+                    165. 比较版本号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    15. 三数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.3" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    16. 最接近的三数之和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.4" data-path="../Easy/680.html">
+            
+                <a href="../Easy/680.html">
+            
+                    
+                    680. 验证回文串 II
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" >
+            
+                <span>
+            
+                    
+                    二分
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.11.1" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    34. 在排序数组中查找元素的第一个和最后一个位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11.2" data-path="../Easy/35.html">
+            
+                <a href="../Easy/35.html">
+            
+                    
+                    35. 搜索插入位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    nowcoder HJ 汪
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../Nowcoder/Daily/">
+            
+                <a href="../../../Nowcoder/Daily/">
+            
+                    
+                    关于 readline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >61. 旋转链表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="61-&#x65CB;&#x8F6C;&#x94FE;&#x8868;">61. &#x65CB;&#x8F6C;&#x94FE;&#x8868;</h1>
+<h2 id="description">Description</h2>
+<pre><code class="lang-Markdown">&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x8282;&#x70B9; head &#xFF0C;&#x65CB;&#x8F6C;&#x94FE;&#x8868;&#xFF0C;&#x5C06;&#x94FE;&#x8868;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5411;&#x53F3;&#x79FB;&#x52A8; k &#x4E2A;&#x4F4D;&#x7F6E;&#x3002;
+&#x793A;&#x4F8B; 1&#xFF1A;
+</code></pre>
+<p><img src="pic/61-1.jpg" alt="&#x8282;&#x70B9;"></p>
+<pre><code class="lang-Markdown">&#x8F93;&#x5165;&#xFF1A;head = [1,2,3,4,5], k = 2
+&#x8F93;&#x51FA;&#xFF1A;[4,5,1,2,3]
+
+&#x793A;&#x4F8B; 2&#xFF1A;
+</code></pre>
+<p><img src="pic/61-2.jpg" alt="&#x8282;&#x70B9;"></p>
+<pre><code class="lang-Markdown">&#x8F93;&#x5165;&#xFF1A;head = [0,1,2], k = 4
+&#x8F93;&#x51FA;&#xFF1A;[2,0,1]
+
+&#x63D0;&#x793A;&#xFF1A;
+&#x94FE;&#x8868;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x6570;&#x76EE;&#x5728;&#x8303;&#x56F4; [0, 500] &#x5185;
+-100 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">Node.val</span> &lt;= <span class="hljs-attr">100</span>
+<span class="hljs-attr">0</span> &lt;= <span class="hljs-attr">k</span> &lt;= <span class="hljs-attr">2</span> * <span class="hljs-attr">109</span>
+</span></span></code></pre>
+<h2 id="solution">Solution</h2>
+<ol>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5207;&#x5272;&#x6210;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x518D;&#x91CD;&#x65B0;&#x7EC4;&#x88C5;<ol>
+<li>&#x5176;&#x5B9E;&#x53CD;&#x8F6C;&#x94FE;&#x8868;&#xFF0C;&#x518D;&#x79FB;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5173;&#x5FC3;&#x8FD9;&#x4E2A;&#x53CD;&#x8F6C;</li>
+<li>&#x56E0;&#x4E3A;&#x53CD;&#x8F6C;&#x540E;&#xFF0C;&#x518D;&#x5411;&#x53F3;&#x79FB;&#x52A8;&#x4E24;&#x4E2A;</li>
+<li>&#x6BD4;&#x5982;[1,2,3,4,5]&#xFF0C;&#x53CD;&#x8F6C;&#x540E;&#x5F97;&#x5230;[5,4,3,2,1],&#x518D;&#x79FB;&#x52A8;k=2&#x4E2A;&#x5143;&#x7D20;&#x5F97;&#x5230;[4,5,1,2,3]&#xFF0C;&#x5982;&#x679C;&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E2A;k&#xFF0C;&#x53CD;&#x6620;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x5230;&#x94FE;&#x8868;&#x4E0A;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x53CD;&#x8F6C;&#x540E;&#x79FB;&#x52A8;k=1&#x4E2A;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x90A3;&#x4E48;&#x9898;&#x76EE;&#x4E3A;&#x4EC0;&#x4E48;&#x662F;k=2&#x5462;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x5173;&#x5FC3;&#x8FD9;&#x4E2A;&#x53CD;&#x8F6C;&#xFF0C;&#x4ECE;&#x800C;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;k=2</li>
+<li>&#x56E0;&#x4E3A;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x628A;&#x6700;&#x540E;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x62CE;&#x51FA;&#x6765;&#x4F5C;&#x4E3A;&#x5934;&#x90E8;&#x94FE;&#x8868;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F97;&#x5230;[4,5]&#xFF0C;&#x539F;&#x94FE;&#x8868;&#x5269;&#x4E0B;[1,2,3]&#xFF0C;&#x7136;&#x540E;&#x7EC4;&#x88C5;&#x53D8;&#x6210;[4,5,1,2,3]</li>
+<li>&#x4F46;&#x8FD8;&#x6709;&#x4E2A;&#x60C5;&#x51B5;&#x662F;&#x94FE;&#x8868;&#x957F;&#x5EA6;&#x4E3A;len=3&#xFF0C;&#x4F46;&#x662F;k=4&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;<code>k = k % len</code>&#xFF0C;&#x5F97;&#x5230;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;k</li>
+</ol>
+</li>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x7B80;&#x6D01;&#x4E00;&#x70B9;&#xFF0C;&#x81EA;&#x5DF1;&#x7684;&#x7B2C;&#x4E00;&#x79CD;&#x6709;&#x70B9;&#x5197;&#x957F;<ol>
+<li>&#x4E5F;&#x662F;&#x5148;&#x8BA1;&#x7B97;len &#x548C; &#x771F;&#x5B9E;&#x7684;k</li>
+<li>&#x627E;&#x5230;&#x94FE;&#x8868;&#x7684;&#x7B2C;n-k&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x6BD4;&#x5982;&#x8FD8;&#x662F;[1,2,3,4,5]&#xFF0C;k&#x4E3A;2</li>
+<li>&#x627E;&#x5230; <code>p = p.next</code> &#x627E;&#x5230;&#x94FE;&#x8868;&#x7684;&#x7B2C;n-k&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x73B0;&#x5728;&#x7684;p&#x6307;&#x5411;&#x4E86;3</li>
+<li>&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E09;&#x4E2A;&#x8BED;&#x53E5;&#x662F;<code>tail_p.next = head</code> &#x4F7F;&#x5F97;&#x5C3E;&#x5DF4;5&#x540E;&#x9762;&#x53BB;&#x63A5;123</li>
+<li><code>head = p.next</code> &#x5934;&#x6307;&#x9488;&#x6307;&#x5411;&#x7B2C;n-k+1&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;45</li>
+<li><code>p.next = null</code> [1,2,3]&#x7684;3&#x540E;&#x9762;&#x662F;null</li>
+</ol>
+</li>
+</ol>
+<h2 id="code">Code</h2>
+<h3 id="code-1">Code 1</h3>
+<pre><code class="lang-JavaScript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ListNode</span>(<span class="hljs-params">val, next</span>) </span>{
+  <span class="hljs-keyword">this</span>.val = val === <span class="hljs-literal">undefined</span> ? <span class="hljs-number">0</span> : val;
+  <span class="hljs-keyword">this</span>.next = next === <span class="hljs-literal">undefined</span> ? <span class="hljs-literal">null</span> : next;
+}
+
+<span class="hljs-comment">/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {ListNode}
+ */</span>
+<span class="hljs-keyword">var</span> rotateRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">head, k</span>) </span>{
+  <span class="hljs-keyword">let</span> p = head;
+  <span class="hljs-keyword">let</span> len = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span> (p) {
+    p = p.next;
+    len++; <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x957F;&#x5EA6;</span>
+  }
+  k = k % len; <span class="hljs-comment">// &#x5F97;&#x5230;&#x771F;&#x7684;k</span>
+  <span class="hljs-keyword">let</span> len_1 = len - k;
+  p = head;
+  <span class="hljs-keyword">let</span> q = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>, <span class="hljs-literal">null</span>);
+  <span class="hljs-keyword">let</span> q_copy = q;
+  <span class="hljs-keyword">while</span> (p) {
+    len_1--;
+    <span class="hljs-keyword">if</span> (len_1 === <span class="hljs-number">0</span>) {
+      q.next = p.next; <span class="hljs-comment">// &#x5206;&#x5272;&#x4E24;&#x7AEF;&#x94FE;&#x8868;</span>
+      p.next = <span class="hljs-literal">null</span>;
+      <span class="hljs-keyword">break</span>;
+    } <span class="hljs-keyword">else</span> {
+      p = p.next;
+    }
+  }
+  <span class="hljs-keyword">while</span> (q) {
+    <span class="hljs-keyword">if</span> (q.next) {
+      q = q.next;
+    } <span class="hljs-keyword">else</span> {
+      q.next = head; <span class="hljs-comment">//&#x91CD;&#x65B0;&#x7EC4;&#x88C5;&#x94FE;&#x8868;</span>
+      <span class="hljs-keyword">break</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> q_copy.next;
+};
+
+<span class="hljs-keyword">let</span> node_1 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">1</span>);
+<span class="hljs-keyword">let</span> node_2 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">2</span>);
+<span class="hljs-keyword">let</span> node_3 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">3</span>);
+<span class="hljs-keyword">let</span> node_4 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">4</span>);
+<span class="hljs-keyword">let</span> node_5 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">5</span>);
+
+node_1.next = node_2;
+node_2.next = node_3;
+node_3.next = node_4;
+node_4.next = node_5;
+
+<span class="hljs-keyword">let</span> k = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">let</span> ans = rotateRight(node_1, k);
+<span class="hljs-built_in">console</span>.log(ans);
+</code></pre>
+<h3 id="code-2">Code 2</h3>
+<pre><code class="lang-JavaScript"><span class="hljs-keyword">var</span> rotateRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">head, k</span>) </span>{
+  <span class="hljs-keyword">if</span> (!head || !k) <span class="hljs-keyword">return</span> head;
+  <span class="hljs-keyword">let</span> p = head;
+  <span class="hljs-keyword">let</span> len = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> tail_p = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>, <span class="hljs-literal">null</span>);
+  <span class="hljs-keyword">while</span> (p) {
+    len++;
+    tail_p = p;
+    p = p.next;
+  }
+  k = k % len;
+  <span class="hljs-keyword">let</span> len_1 = len - k;
+  p = head;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; len - k - <span class="hljs-number">1</span>; i++) {
+    p = p.next; <span class="hljs-comment">//&#x627E;&#x5230;&#x94FE;&#x8868;&#x7684;&#x7B2C;n-k&#x4E2A;&#x8282;&#x70B9;</span>
+  }
+  tail_p.next = head; <span class="hljs-comment">// &#x5C3E;&#x5DF4;5&#x540E;&#x9762;&#x53BB;&#x63A5;123</span>
+  head = p.next; <span class="hljs-comment">// &#x5934;&#x6307;&#x9488;&#x6307;&#x5411;&#x7B2C;n-k+1&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;45</span>
+  p.next = <span class="hljs-literal">null</span>; <span class="hljs-comment">// [1,2,3]&#x7684;3&#x540E;&#x9762;&#x662F;null</span>
+  <span class="hljs-keyword">return</span> head;
+};
+</code></pre>
+<h2 id="source">Source</h2>
+<p>&#x6765;&#x6E90;&#xFF1A;&#x529B;&#x6263;&#xFF08;LeetCode&#xFF09;
+&#x94FE;&#x63A5;&#xFF1A;<a href="https://leetcode.cn/problems/rotate-list/description/" target="_blank">https://leetcode.cn/problems/rotate-list/description/</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="19.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 19. 删除链表的倒数第 N 个结点">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"61. 旋转链表","level":"1.4.6.2","depth":3,"next":{"title":"动态规划","level":"1.4.7","depth":2,"ref":"","articles":[{"title":"718. 最长重复子数组","level":"1.4.7.1","depth":3,"path":"Leetcode/Problems/Medium/718.md","ref":"./Leetcode/Problems/Medium/718.md","articles":[]},{"title":"322. 零钱兑换","level":"1.4.7.2","depth":3,"path":"Leetcode/Problems/Medium/322.md","ref":"./Leetcode/Problems/Medium/322.md","articles":[]},{"title":"300. 最长递增子序列","level":"1.4.7.3","depth":3,"path":"Leetcode/Problems/Medium/300.md","ref":"./Leetcode/Problems/Medium/300.md","articles":[]},{"title":"5. 最长回文子串","level":"1.4.7.4","depth":3,"path":"Leetcode/Problems/Medium/5.md","ref":"./Leetcode/Problems/Medium/5.md","articles":[]}]},"previous":{"title":"19. 删除链表的倒数第 N 个结点","level":"1.4.6.1","depth":3,"path":"Leetcode/Problems/Medium/19.md","ref":"./Leetcode/Problems/Medium/19.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","livereload"],"pluginsConfig":{"expandable-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Leetcode/Problems/Medium/61.md","mtime":"2023-10-01T07:45:19.355Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-10-01T07:46:14.498Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
