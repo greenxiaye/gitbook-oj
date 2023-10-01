@@ -11,6 +11,8 @@
   - [2622. 有时间限制的缓存](./Leetcode/Problems/Medium/2622.md)
   - [2629. 复合函数](./Leetcode/Problems/Easy/2629.md)
 - Leetcode 每日自刷汪
+  - 数
+    - [7. 整数反转](./Leetcode/Problems/Medium/7.md)
   - 数组
     - [54. 螺旋矩阵](./Leetcode/Problems/Medium/54.md)
     - [88. 合并两个有序数组](./Leetcode/Problems/Easy/88.md)
