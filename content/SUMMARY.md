@@ -31,6 +31,7 @@
     - [LCR 120. 寻找文件副本](./Leetcode/Problems/Easy/LCR_120.md)
   - 链表
     - [19. 删除链表的倒数第 N 个结点](./Leetcode/Problems/Medium/19.md)
+    - [61. 旋转链表](./Leetcode/Problems/Medium/61.md)
   - 动态规划
     - [718. 最长重复子数组](./Leetcode/Problems/Medium/718.md)
     - [322. 零钱兑换](./Leetcode/Problems/Medium/322.md)
